@@ -5,16 +5,13 @@ using System.Text;
 
 namespace Library.Domain.Model
 {
-    public class CheckoutHistory
+    public class Checkout
     {
         public int Id { get; set; }
         [Required]
         public LibraryAsset LibraryAsset { get; set; }
-        [Required]
         public LibraryCard LibraryCard { get; set; }
-        [Required]
-        public DateTime Checkout { get; set; }
-        public DateTime? Checkin { get; set; }
-
+        public DateTime Since { get; set; }
+        public DateTime Until { get; set; }
     }
 }
