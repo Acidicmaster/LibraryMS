@@ -1,0 +1,44 @@
+﻿@model LibraryMS.ViewModel.AssetDetailModel
+@{
+    ViewBag.Title = "Details";
+
+}
+
+<div class="container">
+    <div class="page-header clearfix detailHeading">
+        <h2 class="text-muted">View Library Item </h2>
+
+    </div>
+
+</div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <img src="@Model.imageUrl" />
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <p id="itemTitle"> @Model.Title</p>
+            <p id="itemAuthor"> @Model.AuthorOrDirector</p>
+            <p id="itemStatus"> @Model.status</p>
+            <p id="itemType"> @Model.Type</p>
+            <p id="itemLocation"> @Model.CurrentLocation</p>
+
+            @if (Model.status == "Checked out")
+            {
+                <p id="itemPatron"> Checked out by : @Model.PatronName</p>
+            }
+
+            @if (Model.status == "available")
+            {
+                <p><a class="btn btn-lg btn-info" role="button" asp-controller="Catalog" asp-action="Checkout" asp-route-id="@Model.AssetId"> Check out</a></p>
+            }
+
+        </div>
+
+
+    </div>
+
+</div>
