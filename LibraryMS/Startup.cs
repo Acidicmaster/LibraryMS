@@ -30,6 +30,7 @@ namespace LibraryMS
             services.AddControllersWithViews();
             services.AddSingleton(Configuration);
             services.AddScoped<ILibraryAsset, EfLibraryAsset>();
+            services.AddScoped<ICheckout, EFCheckoutService>();
             services.AddDbContext<LibraryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LibraryConnection")));
         }
 

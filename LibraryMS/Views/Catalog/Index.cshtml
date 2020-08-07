@@ -4,6 +4,7 @@
 }
 <div id="assests">
     <h3> Library Catalog</h3>
+    <hr />
     <div id="assests-table">
         <table class="table table-condensed" id="CatalogIndexTable">
             <thead>
@@ -12,6 +13,7 @@
                     <th> Title </th>
                     <th> Author / Director </th>
                     <th> Dewey call number </th>
+                    <th> Action </th>
                     
                 </tr>
 
@@ -22,12 +24,12 @@
                 <tr class="assetRow">
                     
                     <td class="assetData">
-                        <a asp-controller="Catalog" asp-action="Detail" asp-route-id="@asset.Id"> Check details</a>
                         <img src="@asset.ImageUrl" class="imageCell" />
                     </td>
                     <td class="">@asset.Title</td>
                     <td class="">@asset.AuthorOrDirector</td>
                     <td class="">@asset.DeweyCallNumbers</td>
+                    <td>  <a asp-controller="Catalog" asp-action="Detail" asp-route-id="@asset.Id"> Check details</a></td>
 
                 </tr>
 		 

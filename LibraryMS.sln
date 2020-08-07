@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryMS", "LibraryMS\Libr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Domain", "Library.Domain\Library.Domain.csproj", "{59B3D2E1-D064-4BE9-8FE6-C34CF72C0FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Services", "Library.Services\Library.Services.csproj", "{3BFC7300-0191-4930-B1FD-7F7AA56FF886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library.Services", "Library.Services\Library.Services.csproj", "{3BFC7300-0191-4930-B1FD-7F7AA56FF886}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
