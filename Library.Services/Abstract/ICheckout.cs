@@ -9,6 +9,7 @@ namespace Library.Services.Abstract
     {
         IEnumerable<Checkout> GetAllCheckout();
         Checkout GetCheckoutById(int Id);
+        Checkout GetLatestCheckout(int AssetId);
         void AddCheckout(Checkout checkout);
         void CheckoutItem(int assetId , int libraryCardId);
         void CheckinItem(int assetId, int libraryCardId);
